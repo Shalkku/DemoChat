@@ -49,9 +49,6 @@ exports = module.exports = function(wss, users, chathistory) {
             _history.add(from, msg);
             var chat = {from: from, message: msg, params: params};
             _.each(_wss.clients, function(client) {
-                /*if(client.user && client.user.nick !== from) {
-                    client.send(JSON.stringify(chat));
-                } */
                 if(client.user) {
                  client.send(JSON.stringify(chat));
                  }

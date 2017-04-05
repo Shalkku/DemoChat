@@ -1,5 +1,5 @@
 {
-  "name": "LeadinDemoChat",
+  "name": "DemoChat",
   "version": "0.0.1",
   "main": "app.js",
   "dependencies": {

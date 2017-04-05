@@ -6,7 +6,7 @@ var util = require('util');
 
 
 var app = express();
-app.set('name', "Leadin Chat Demo");
+app.set('name', "DEMOCHAT");
 app.set('port', 8888);
 
 app.use(express.static('css'));
@@ -35,7 +35,7 @@ var chats = new require('./chathistory')();
 var wssServer = require('ws').Server({server: server, perMessageDeflate: false});
 wssServer.on('connection', function(ws) {
 
-    ws.send("Hello from Leadin chat. Set the nickname with the command /nick nickname before chatting away.");
+    ws.send("Set the nickname with the command /nick nickname before chatting away.");
 
     ws.on('message', function(msg) {
         if(msg[0] === '/') {
